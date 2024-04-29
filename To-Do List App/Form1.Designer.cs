@@ -1,6 +1,6 @@
 ﻿namespace To_Do_List_App
 {
-    partial class Form1
+    partial class ToDoList
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,18 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToDoList));
+            label1 = new Label();
             SuspendLayout();
             // 
-            // Form1
+            // label1
+            // 
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(1569, 120);
+            label1.TabIndex = 0;
+            label1.Text = "To-Do List";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.Click += label1_Click;
+            // 
+            // ToDoList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(638, 455);
-            Name = "Form1";
-            Text = "Form1";
+            BackColor = Color.Gray;
+            ClientSize = new Size(1593, 775);
+            Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "ToDoList";
+            Text = "To-Do List";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Label label1;
     }
 }
